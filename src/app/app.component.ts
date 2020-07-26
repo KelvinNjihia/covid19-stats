@@ -10,15 +10,27 @@ export class AppComponent {
   menuItems: MenuItem[] = [
     {
       label: 'Countries',
-      icon: 'language'
+      icon: 'language',
+      showOnMobile: true,
+      showOnTablet: true,
+      showOnDesktop: true,
+      route: '/'
     },
     {
       label: 'Graphs',
-      icon: 'poll'
+      icon: 'poll',
+      showOnMobile: false,
+      showOnTablet: true,
+      showOnDesktop: true,
+      route: '/graphs'
     },
     {
       label: 'About',
-      icon: 'info'
+      icon: 'info',
+      showOnMobile: false,
+      showOnTablet: false,
+      showOnDesktop: true,
+      route: '/#'
     }
   ];
 }
