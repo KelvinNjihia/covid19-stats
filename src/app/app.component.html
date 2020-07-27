@@ -1,3 +1,4 @@
+<!-- Toolbar -->
 <mat-toolbar fxLayout="row" color="primary">
   <span fxFlex>Covid-19 Stats</span>
   <button mat-button *ngFor="let item of menuItems" [fxShow]="item.showOnDesktop" [fxShow.xs]="item.showOnMobile"
@@ -23,7 +24,5 @@
     </mat-menu>
   </ng-container>
 </mat-toolbar>
-
-
+<!-- Main body -->
 <router-outlet></router-outlet>
-{{title}}
