@@ -1,4 +1,6 @@
+import { AllStats } from './../../models/allStats.models';
 import { Component, OnInit } from '@angular/core';
+import { StatsService } from '../../services/stats.service';
 
 @Component({
   selector: 'covid19-home',
@@ -7,10 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   bgColor: string = 'lightblue';
+  allStats: AllStats;
 
-  constructor() { }
+  constructor(
+    private statsService: StatsService
+  ) { }
 
   ngOnInit(): void {
+    this.statsService.getAllStats().subscribe(allStats => {
+      this.allStats = allStats;
+      console.log(allStats);
+    });
+
   }
 
 }

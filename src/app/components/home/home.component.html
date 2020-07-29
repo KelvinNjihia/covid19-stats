@@ -2,10 +2,10 @@
 
   <div fxFlex="50" fxFlex.xs="50" [style.background]="[bgColor]">
 
-    <mat-card fxLayout="column" fxLayoutAlign="center center" class="example-card">
-      <mat-card-header>
+    <mat-card fxLayout="column" fxLayoutAlign="space-evenly stretch" class="example-card">
+      <mat-card-title>
         <h2>Welcome to Covid19Stats</h2>
-      </mat-card-header>
+      </mat-card-title>
       <mat-card-content>
         <p>Covid-19 is a virus that came about in November 2019.</p>
 
@@ -15,10 +15,11 @@
     </mat-card>
   </div>
   <div fxFlex="50" fxFlex.xs="50">
-    <p>Covid-19 is a virus that came about in November 2019.</p>
+    <p>{{ allStats?.population }}</p>
+    <p>{{ allStats?.updated | date: 'short' }}</p>
+    <p>{{ allStats?.updated }}</p>
+    {{allStats?.cases}}
 
-      <h2>Welcome to Covid19Stats</h2>
-      Here we give you realtime stats of the cases. Active, recovered and dead.
   </div>
 
 </div>
