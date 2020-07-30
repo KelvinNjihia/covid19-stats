@@ -21,3 +21,8 @@ export interface AllStats {
     criticalPerOneMillion: number;
     affectedCountries: number;
 }
+
+export interface AllStatsResponse {
+  type: string;
+  value: Array<AllStats>;
+}

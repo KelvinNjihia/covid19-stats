@@ -15,10 +15,8 @@
     </mat-card>
   </div>
   <div fxFlex="50" fxFlex.xs="50">
-    <p>{{ allStats?.population }}</p>
-    <p>{{ allStats?.updated | date: 'short' }}</p>
-    <p>{{ allStats?.updated }}</p>
-    {{allStats?.cases}}
+    {{allStats$}}
+    <p *ngFor="let data of allStats$ | async">{{ data.cases }}</p>
 
   </div>
 
